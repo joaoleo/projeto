@@ -15,9 +15,9 @@ class CreateEmpresasTable extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('estado_id');
-            $table->unsignedInteger('cidade_id');
             $table->string('nome');
+            $table->unsignedInteger('estado_id');
+            $table->string('cidade', 45);
             $table->text('endereco')->nullable();
             $table->string('cep', 10)->nullable();
             $table->string('telefone', 20)->nullable();
@@ -25,10 +25,10 @@ class CreateEmpresasTable extends Migration
             $table->timestamps();
 
             $table->index('estado_id');
-            $table->index('cidade_id');
+//            $table->index('cidade_id');
 
             $table->foreign('estado_id')->references('id')->on('estados')->onUpdate('cascade');
-            $table->foreign('cidade_id')->references('id')->on('cidades')->onUpdate('cascade');
+//            $table->foreign('cidade_id')->references('id')->on('cidades')->onUpdate('cascade');
         });
     }
 

@@ -138,4 +138,10 @@ class ProjetosController extends Controller
             Mif::create($mif);
         }
     }
+
+    public function mif($id = null)
+    {
+
+        return view('projetos.mifs');
+    }
 }

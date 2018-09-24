@@ -14,17 +14,17 @@
 
 <div class="form-group">
     {!! Form::label('h_consultoria', 'Hora Consultoria:') !!}
-    {!! Form::time('h_consultoria', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::number('h_consultoria', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::label('h_coordenacao', 'Hora Coordenação:') !!}
-    {!! Form::time('h_coordenacao', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::number('h_coordenacao', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::label('h_translado', 'Hora Translado:') !!}
-    {!! Form::time('h_translado', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::number('h_translado', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
 </div>
 
 <div class="ln_solid"></div>

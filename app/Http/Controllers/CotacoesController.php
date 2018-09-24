@@ -45,7 +45,10 @@ class CotacoesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cotacao = new Cotacao($request->except('_token'));
+        $cotacao->save();
+
+        return redirect()->to('cotacoes');
     }
 
     /**
@@ -67,7 +70,8 @@ class CotacoesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cotacao = Cotacao::findOrFail($id);
+        return view('cotacoes.edit', compact('cotacao'));
     }
 
     /**

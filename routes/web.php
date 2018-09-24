@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/empresas', 'EmpresasController');
 
 Route::resource('/projetos', 'ProjetosController');
+Route::get('/projetos/{id}/mifs', 'ProjetosController@mif');
 
 Route::resource('/cotacoes', 'CotacoesController');
 

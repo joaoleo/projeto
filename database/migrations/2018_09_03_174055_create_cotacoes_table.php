@@ -17,9 +17,9 @@ class CreateCotacoesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('empresa_id');
             $table->unsignedInteger('consultor_id');
-            $table->integer('h_consultoria')->nullable();
-            $table->integer('h_coordenacao')->nullable();
-            $table->integer('h_translado')->nullable();
+            $table->unsignedSmallInteger('h_consultoria')->nullable();
+            $table->unsignedSmallInteger('h_coordenacao')->nullable();
+            $table->unsignedSmallInteger('h_translado')->nullable();
             $table->timestamps();
         });
     }

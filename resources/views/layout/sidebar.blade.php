@@ -1,3 +1,4 @@
+
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
     <div class="menu_section">
         <h3>Geral</h3>
@@ -21,7 +22,6 @@
             <li><a><i class="fa fa-usd"></i> Taxas </a></li>
             <li><a href="{{ url('/users') }}"><i class="fa fa-users"></i> Funcionários </a></li>
             <li><a href="{{ url('/cargos') }}"><i class="fa fa-sitemap"></i> Cargos </a></li>
-            <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
         </ul>
     </div>
 </div>

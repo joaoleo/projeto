@@ -21,7 +21,7 @@
 </div>
 <div class="form-group">
     {!! Form::label('cidade_id', 'Cidade:') !!}
-    {!! Form::select('cidade_id', $cidades, null, ['class' => 'form-control']) !!}
+    {!! Form::text('cidade', null, ['class' => 'form-control', 'placeholder' => 'Cidade']) !!}
 </div>
 
 <div class="form-group">

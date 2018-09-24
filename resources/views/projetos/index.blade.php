@@ -52,6 +52,7 @@
                                             <a href="javascript:;" onclick="document.getElementById('projeto-del-{{ $projeto->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Projeto"><i class="fa fa-trash-o"></i> Deletar</a>
                                             {!! Form::open(['url' => 'projetos/' . $projeto->id, 'method' => 'DELETE', 'id' => 'projeto-del-' . $projeto->id , 'style' => 'display: none']) !!}
                                             {!! Form::close() !!}
+                                            <a href="{{ url('projetos/' . $projeto->id . '/mifs') }}" class="btn btn-xs btn-dark" type="button" data-toggle="tooltip" title="Editar MIFS"><i class="fa fa-pencil"></i> Mifs</a>
                                         </td>
                                     </tr>
                                 @empty
