@@ -10,13 +10,10 @@ class Cotacao extends Eloquent
 
 	protected $casts = [
 		'empresa_id' => 'int',
-		'consultor_id' => 'int'
-	];
-
-	protected $dates = [
-		'h_consultoria',
-		'h_coordenacao',
-		'h_translado'
+		'consultor_id' => 'int',
+        'h_consultoria' => 'int',
+        'h_coordenacao' => 'int',
+        'h_translado' => 'int'
 	];
 
 	protected $fillable = [
