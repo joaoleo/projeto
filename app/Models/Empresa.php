@@ -8,23 +8,17 @@ class Empresa extends Eloquent
 {
 	protected $casts = [
 		'estado_id' => 'int',
-		'cidade_id' => 'int'
 	];
 
 	protected $fillable = [
 		'estado_id',
-		'cidade_id',
+		'cidade',
 		'nome',
 		'endereco',
 		'cep',
 		'telefone',
 		'observacao'
 	];
-
-	public function cidade()
-	{
-		return $this->belongsTo(\App\Models\Cidade::class);
-	}
 
 	public function estado()
 	{

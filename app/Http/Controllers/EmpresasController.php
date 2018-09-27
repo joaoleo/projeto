@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cidade;
+//use App\Models\Cidade;
 use App\Models\Empresa;
 use App\Models\Estado;
 use Illuminate\Http\Request;
@@ -28,8 +28,8 @@ class EmpresasController extends Controller
     public function create()
     {
         $estados = Estado::all()->pluck('nome', 'id');
-        $cidades = Cidade::all()->pluck('nome', 'id');
-        return view('empresas.add', compact('estados', 'cidades'));
+//        $cidades = Cidade::all()->pluck('nome', 'id');
+        return view('empresas.add', compact('estados'));
     }
 
     /**
@@ -70,9 +70,9 @@ class EmpresasController extends Controller
         $empresa = Empresa::findOrFail($id);
 
         $estados = Estado::all()->pluck('nome', 'id');
-        $cidades = Cidade::all()->pluck('nome', 'id');
+//        $cidades = Cidade::all()->pluck('nome', 'id');
 
-        return view('empresas.edit', compact('empresa', 'estados', 'cidades'));
+        return view('empresas.edit', compact('empresa', 'estados'));
     }
 
     /**
