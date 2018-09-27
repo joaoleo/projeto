@@ -57,7 +57,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <th scope="row" colspan="9" class="text-center">Nenhum projeto cadastrado.</th>
+                                        <th scope="row" colspan="10" class="text-center">Nenhum projeto cadastrado.</th>
                                     </tr>
                                 @endforelse
                             </tbody>

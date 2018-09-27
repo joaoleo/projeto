@@ -41,7 +41,7 @@
                                 		</td>
                                     </tr>
                             	@empty
-                            		<td colspan="5" class="text-center">Nenhum cargo cadastrado.</td>
+                            		<td colspan="3" class="text-center">Nenhum cargo cadastrado.</td>
                             	@endforelse
                             </tbody>
                         </table>

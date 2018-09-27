@@ -48,7 +48,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <th scope="row" colspan="5" class="text-center">Nenhum funcionário cadastrado.</th>
+                                    <th scope="row" colspan="6" class="text-center">Nenhum funcionária(o) cadastrado.</th>
                                 </tr>
                             @endforelse
                             </tbody>

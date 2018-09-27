@@ -28,8 +28,7 @@
                                         <th class="column-title">Nome </th>
                                         <th class="column-title">Telefone </th>
                                         <th class="column-title">Cadastrado em </th>
-                                        <th class="column-title no-link last"><span class="nobr">Opções</span>
-                                        </th>
+                                        <th class="column-title no-link last"> <span class="nobr">Opções</span> </th>
                                     </tr>
                                 </thead>
 

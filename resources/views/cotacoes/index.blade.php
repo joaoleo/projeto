@@ -29,8 +29,7 @@
                                         <th class="column-title">Cadastrado em </th>
                                         <th class="column-title">Orçamento </th>
                                         <th class="column-title">Aprovado </th>
-                                        <th class="column-title no-link last"><span class="nobr">Opções</span>
-                                        </th>
+                                        <th class="column-title no-link last"><span class="nobr">Opções</span> </th>
                                     </tr>
                                 </thead>
 
@@ -48,7 +47,7 @@
                                             {!! Form::close() !!}
                                         </td>
                                     @empty
-                                        <td colspan="5" class="text-center">Nenhuma cotação cadastrada.</td>
+                                        <td colspan="6" class="text-center">Nenhuma cotação cadastrada.</td>
                                     @endforelse
                                 </tbody>
                             </table>
