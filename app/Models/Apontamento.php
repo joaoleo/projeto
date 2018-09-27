@@ -10,19 +10,21 @@ class Apontamento extends Eloquent
 		'empresa_id' => 'int',
 		'projeto_id' => 'int',
 		'consultor_id' => 'int',
-		'refeicao' => 'float',
-		'estacionamento' => 'float',
-		'kms' => 'float',
-		'pedagio' => 'float',
-		'hospital' => 'float',
-		'taxi' => 'float',
-		'despesas' => 'float'
+		'refeicao' => 'time',
+		'estacionamento' => 'time',
+		'kms' => 'time',
+		'pedagio' => 'time',
+		'hospital' => 'time',
+		'taxi' => 'time',
+		'despesas' => 'time'
 	];
 
 	protected $dates = [
 		'inicio',
 		'almoco',
-		'fim'
+		'fim',
+        'created_at',
+        'updated_at'
 	];
 
 	protected $fillable = [
@@ -49,11 +51,12 @@ class Apontamento extends Eloquent
 
 	public function empresa()
 	{
-		return $this->belongsTo(\App\Models\Empresa::class);
+		return $this->belongsTo(\App\Models\Empresa::class, 'empresa_id');
 	}
 
 	public function projeto()
 	{
-		return $this->belongsTo(\App\Models\Projeto::class);
+		return $this->belongsTo(\App\Models\Projeto::class, 'projeto_id');
 	}
+
 }

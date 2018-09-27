@@ -29,3 +29,5 @@ Route::resource('/cotacoes', 'CotacoesController');
 Route::resource('/users', 'UsersController');
 
 Route::resource('/cargos', 'CargosController');
+
+Route::resource('/apontamentos', 'ApontamentosController');

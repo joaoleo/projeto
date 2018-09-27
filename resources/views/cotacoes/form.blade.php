@@ -27,6 +27,11 @@
     {!! Form::number('h_translado', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('vazio', 'Toral R$:') !!}
+    {!! Form::number('vazio', null, ['class' => 'form-control', 'placeholder' => 'R$ 15.000,00', 'disabled']) !!}
+</div>
+
 <div class="ln_solid"></div>
 <div class="form-group">
     {!! Form::submit($submitButton, ['class' => 'btn btn-primary']) !!}
