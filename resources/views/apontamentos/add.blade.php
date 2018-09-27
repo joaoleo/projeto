@@ -5,6 +5,8 @@
     <link href="{{ asset('vendors/select2/dist/css/select2.css') }}" rel="stylesheet">
     <!-- SummerNote -->
     <link href="{{ asset('vendors/summernote/summernote.min.css') }}" rel="stylesheet">
+    <!-- ClockPicker -->
+    <link href="{{ asset('vendors/clockpicker/dist/bootstrap-clockpicker.min.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -27,7 +29,7 @@
                     </div>
                     <div class="x_content">
 
-                        {!! Form::open(['url' => '/apontamentos', 'class' => 'form-horizontal form-label-left']) !!}
+                        {!! Form::open(['url' => 'apontamentos', 'class' => 'form-horizontal form-label-left']) !!}
                         <div class="form-group">
                             {!! Form::label('empresa_id', 'Empresa:') !!}
                             {!! Form::select('empresa_id', $empresas, null, ['class' => 'form-control', 'required']) !!}
@@ -45,17 +47,17 @@
 
                         <div class="form-group">
                             {!! Form::label('inicio', 'Início:') !!}
-                            {!! Form::time('inicio', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
+                            {!! Form::text('inicio', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
                         </div>
 
                         <div class="form-group">
                             {!! Form::label('almoco', 'Almoço:') !!}
-                            {!! Form::time('almoco', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
+                            {!! Form::text('almoco', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
                         </div>
 
                         <div class="form-group">
                             {!! Form::label('fim', 'Fim:') !!}
-                            {!! Form::time('fim', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
+                            {!! Form::text('fim', null, ['class' => 'form-control', 'placeholder' => '00:00', 'required']) !!}
                         </div>
 
                         <div class="form-group">
@@ -102,7 +104,6 @@
                         <div class="form-group">
                             {!! Form::submit('Adicionar', ['class' => 'btn btn-primary']) !!}
                         </div>
-
                         {!! Form::close() !!}
 
                     </div>
@@ -142,6 +143,29 @@
                 lang: 'pt-BR',
                 height: 200,
             });
+        });
+    </script>
+
+    <!-- ClockPicker -->
+    <script src="{{ asset('vendors/clockpicker/dist/bootstrap-clockpicker.min.js') }}"></script>
+    <script>
+        $('#inicio').clockpicker({
+            placement: 'bottom',
+            align: 'left',
+            donetext: 'Fechar',
+            autoclose: true,
+        });
+        $('#almoco').clockpicker({
+            placement: 'bottom',
+            align: 'left',
+            donetext: 'Fechar',
+            autoclose: true,
+        });
+        $('#fim').clockpicker({
+            placement: 'bottom',
+            align: 'left',
+            donetext: 'Fechar',
+            autoclose: true,
         });
     </script>
 @endsection

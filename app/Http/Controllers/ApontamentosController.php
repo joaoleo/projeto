@@ -6,6 +6,7 @@ use App\Models\Apontamento;
 use App\Models\Empresa;
 use App\Models\Projeto;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ApontamentosController extends Controller
@@ -41,8 +42,6 @@ class ApontamentosController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
-//        die();
         $apontamento = new Apontamento($request->except('_token'));
         $apontamento->save();
 
@@ -92,5 +91,10 @@ class ApontamentosController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function formatTime($time)
+    {
+        return date("Y-m-d H:i:s", strtotime($time));
     }
 }

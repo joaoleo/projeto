@@ -4,27 +4,20 @@ namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
 
+
 class Apontamento extends Eloquent
 {
 	protected $casts = [
 		'empresa_id' => 'int',
 		'projeto_id' => 'int',
 		'consultor_id' => 'int',
-		'refeicao' => 'time',
-		'estacionamento' => 'time',
-		'kms' => 'time',
-		'pedagio' => 'time',
-		'hospital' => 'time',
-		'taxi' => 'time',
-		'despesas' => 'time'
-	];
-
-	protected $dates = [
-		'inicio',
-		'almoco',
-		'fim',
-        'created_at',
-        'updated_at'
+		'refeicao' => 'float',
+		'estacionamento' => 'float',
+		'kms' => 'float',
+		'pedagio' => 'float',
+		'hospital' => 'float',
+		'taxi' => 'float',
+		'despesas' => 'float'
 	];
 
 	protected $fillable = [
@@ -58,5 +51,4 @@ class Apontamento extends Eloquent
 	{
 		return $this->belongsTo(\App\Models\Projeto::class, 'projeto_id');
 	}
-
 }
