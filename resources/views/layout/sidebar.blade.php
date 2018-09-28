@@ -12,9 +12,9 @@
     </div>
 
     <div class="menu_section">
-        <h3>Live On</h3>
+        <h3>Admin</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-usd"></i> Taxas </a></li>
+            {{--<li><a><i class="fa fa-usd"></i> Taxas </a></li>--}}
             <li><a href="{{ url('/users') }}"><i class="fa fa-users"></i> Funcionários </a></li>
             <li><a href="{{ url('/cargos') }}"><i class="fa fa-sitemap"></i> Cargos </a></li>
         </ul>

@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin Painel | </title>
+    <title>Sistema de Gerenciamento de Projetos</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -31,7 +31,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="{{ url('/home') }}" class="site_title"><i class="fa fa-home"></i> <span>Admin Painel</span></a>
+                    <a href="{{ url('/home') }}" class="site_title"><i class="fa fa-home"></i> <span>S.G.P.</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -43,12 +43,11 @@
                     </div>
                     <div class="profile_info">
                         <span>Bem-vinda(o),</span>
-                        <h2>John Doe</h2>
+                        <h2>Guilherme de Paula</h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- /menu profile quick info -->
-
                 <br />
 
                 <!-- sidebar menu -->
@@ -70,7 +69,7 @@
 
         <!-- footer content -->
         <footer>
-            <div class="pull-right"> Admin Painel &copy; {{ date('Y') }}</div>
+            <div class="pull-right">Sistema de Gerenciamento de Projetos &copy; {{ date('Y') }}</div>
             <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->

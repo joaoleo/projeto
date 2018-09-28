@@ -11,34 +11,34 @@
         <div class="row top_tiles">
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
+                    <div class="icon"><i class="fa fa-bar-chart-o"></i></div>
                     <div class="count">179</div>
-                    <h3>New Sign ups</h3>
-                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    <h3>Projetos</h3>
+                    {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-comments-o"></i></div>
-                    <div class="count">179</div>
-                    <h3>New Sign ups</h3>
-                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    <div class="icon"><i class="fa fa-desktop"></i></div>
+                    <div class="count">55</div>
+                    <h3>Empresas cadastradas</h3>
+                    {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
-                    <div class="count">179</div>
-                    <h3>New Sign ups</h3>
-                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    <div class="icon"><i class="fa fa-clock-o"></i></div>
+                    <div class="count">3182</div>
+                    <h3>Horas Trabalhadas</h3>
+                    {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-check-square-o"></i></div>
-                    <div class="count">179</div>
-                    <h3>New Sign ups</h3>
-                    <p>Lorem ipsum psdea itgum rixt.</p>
+                    <div class="icon"><i class="fa fa-users"></i></div>
+                    <div class="count">3</div>
+                    <h3>Funcionários</h3>
+                    {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Transaction Summary <small>Weekly progress</small></h2>
+                        <h2>Lucratividade <small>Lucro anual</small></h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -56,29 +56,21 @@
                                 <div id="chartty" class="demo-placeholder"></div>
                             </div>
                             <div class="tiles">
-                                <div class="col-md-4 tile">
-                                    <span>Total Sessions</span>
-                                    <h2>231,809</h2>
+                                <div class="col-md-3 tile">
+                                    <span>Gastos</span>
+                                    <h2>R$31.809,92</h2>
                                     <span class="sparkline11 graph" style="height: 160px;">
                                         <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
                                     </span>
                                 </div>
-                                <div class="col-md-4 tile">
-                                    <span>Total Revenue</span>
-                                    <h2>$231,809</h2>
+                                <div class="col-md-3 tile">
+                                    <span>Lucro</span>
+                                    <h2>R$256,790.55</h2>
                                     <span class="sparkline22 graph" style="height: 160px;">
                                         <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
                                     </span>
                                 </div>
-                                <div class="col-md-4 tile">
-                                    <span>Total Sessions</span>
-                                    <h2>231,809</h2>
-                                    <span class="sparkline11 graph" style="height: 160px;">
-                                        <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
-                                    </span>
-                                </div>
                             </div>
-
                         </div>
 
                     </div>
@@ -100,11 +92,11 @@
             // Chart data records -- each entry in this array corresponds to a point on
             // the chart.
             data: [
-                { year: '2008', value: 20 },
-                { year: '2009', value: 10 },
-                { year: '2010', value: 5 },
-                { year: '2011', value: 5 },
-                { year: '2012', value: 20 }
+                { year: '2014', value: 20 },
+                { year: '2015', value: 10 },
+                { year: '2016', value: 5 },
+                { year: '2017', value: 5 },
+                { year: '2018', value: 20 }
             ],
             // The name of the data record attribute that contains x-values.
             xkey: 'year',
@@ -112,7 +104,7 @@
             ykeys: ['value'],
             // Labels for the ykeys -- will be displayed when you hover over the
             // chart.
-            labels: ['Value']
+            labels: ['Valor']
         });
     </script>
 @endsection
