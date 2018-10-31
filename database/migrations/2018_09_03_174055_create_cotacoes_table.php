@@ -21,6 +21,12 @@ class CreateCotacoesTable extends Migration
             $table->unsignedSmallInteger('h_coordenacao')->nullable();
             $table->unsignedSmallInteger('h_translado')->nullable();
             $table->timestamps();
+			
+			$table->index('empresa_id');
+            $table->index('consultor_id');
+
+            $table->foreign('empresa_id')->references('id')->on('empresas')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('consultor_id')->references('id')->on('users')->onUpdate('cascade');
         });
     }
 
