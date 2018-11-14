@@ -13,23 +13,28 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('h_consultoria', 'Hora Consultoria:') !!}
-    {!! Form::number('h_consultoria', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::label('h_consultoria', 'Horas Consultoria:') !!}
+    {!! Form::number('h_consultoria', null, ['class' => 'form-control', 'placeholder' => 'Horas Consultoria']) !!}
 </div>
 
 <div class="form-group">
-    {!! Form::label('h_coordenacao', 'Hora Coordenação:') !!}
-    {!! Form::number('h_coordenacao', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::label('h_coordenacao', 'Horas Coordenação:') !!}
+    {!! Form::number('h_coordenacao', null, ['class' => 'form-control', 'placeholder' => 'Horas Consultoria']) !!}
 </div>
 
 <div class="form-group">
-    {!! Form::label('h_translado', 'Hora Translado:') !!}
-    {!! Form::number('h_translado', null, ['class' => 'form-control', 'placeholder' => 'Hora Consultoria']) !!}
+    {!! Form::label('h_translado', 'Horas Translado:') !!}
+    {!! Form::number('h_translado', null, ['class' => 'form-control', 'placeholder' => 'Horas Consultoria']) !!}
 </div>
 
 <div class="form-group">
-    {!! Form::label('vazio', 'Toral R$:') !!}
-    {!! Form::number('vazio', null, ['class' => 'form-control', 'placeholder' => 'R$ 15.000,00', 'disabled']) !!}
+    {!! Form::label('orcamento', 'Toral R$:') !!}
+    {!! Form::number('orcamento', null, ['class' => 'form-control', 'placeholder' => 'R$ 15.000,00', 'disabled']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('status', 'Status:') !!}
+    {!! Form::select('status', ['aberto' => 'Aberto', 'aprovado' => 'Aprovado', 'aguardando' => 'Aguardando', 'cancelado' => 'Cancelado'], null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <div class="ln_solid"></div>

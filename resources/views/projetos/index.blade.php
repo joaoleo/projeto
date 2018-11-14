@@ -32,7 +32,7 @@
                                     <th>Data Limite</th>
                                     <th>Prazo Final</th>
                                     <th>Data Término</th>
-                                    <th>Opções</th>
+                                    <th class="text-center">Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,12 +47,13 @@
                                         <td>{{ $projeto->getDataLimite() }}</td>
                                         <td>{{ $projeto->getPrazoFinal() }}</td>
                                         <td>{{ $projeto->getDataTermino() }}</td>
-                                        <td class=" last">
+                                        <td class="last text-center">
                                             <a href="{{ url('projetos/' . $projeto->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Projeto"><i class="fa fa-pencil"></i> Editar</a>
                                             <a href="javascript:;" onclick="document.getElementById('projeto-del-{{ $projeto->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Projeto"><i class="fa fa-trash-o"></i> Deletar</a>
                                             {!! Form::open(['url' => 'projetos/' . $projeto->id, 'method' => 'DELETE', 'id' => 'projeto-del-' . $projeto->id , 'style' => 'display: none']) !!}
                                             {!! Form::close() !!}
-                                            <a href="{{ url('projetos/' . $projeto->id . '/mifs') }}" class="btn btn-xs btn-dark" type="button" data-toggle="tooltip" title="Editar MIFS"><i class="fa fa-pencil"></i> Mifs</a>
+                                            <a href="{{ url('projetos/' . $projeto->id . '/mifs') }}" class="btn btn-xs btn-dark" type="button" data-toggle="tooltip" title="Editar MIFS"><i class="fa fa-check-square-o"></i> MIF's</a>
+                                            <a href="{{ url('apontamentos/' . $projeto->id) }}" class="btn btn-xs btn-warning" type="button" data-toggle="tooltip" title="Visualizar Apontamentos"><i class="fa fa-table"></i> Apontamentos</a>
                                         </td>
                                     </tr>
                                 @empty

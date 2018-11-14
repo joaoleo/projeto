@@ -35,7 +35,7 @@
                         <br />
 
                         <div>
-                            <h1><i class="fa fa-home"></i> Sistema de Gerenciamento de Projetos</h1>
+                            <h1><i class="fa fa-home"></i>Sistema de Gerenciamento de Projetos</h1>
                             <p>©{{ date('Y') }} Todos os direitos reservados.</p>
                         </div>
                     </div>

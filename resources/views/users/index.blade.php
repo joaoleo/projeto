@@ -28,6 +28,8 @@
                                 <th>E-mail</th>
                                 <th>Contratação</th>
                                 <th>Cargo</th>
+                                <th>Custo</th>
+                                <th>Custo Hora</th>
                                 <th>Opções</th>
                             </tr>
                             </thead>
@@ -39,6 +41,8 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->tipo }}</td>
                                     <td>{{ $user->cargo->nome }}</td>
+                                    <td>R$ {{ number_format($user->custo(), 2, ',', '.') }}</td>
+                                    <td>R$ {{ $user->custoHora() }}</td>
                                     <td class=" last">
                                         <a href="{{ url('users/' . $user->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Funcionário"><i class="fa fa-pencil"></i> Editar</a>
                                         <a href="javascript:;" onclick="document.getElementById('user-del-{{ $user->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Funcionário"><i class="fa fa-trash-o"></i> Deletar</a>

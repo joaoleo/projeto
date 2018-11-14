@@ -28,10 +28,18 @@ class ApontamentosController extends Controller
      */
     public function create()
     {
-        $empresas = Empresa::all()->pluck('nome', 'id');
-        $projetos = Projeto::all()->pluck('nome', 'id');
-        $consultores = User::all()->pluck('name', 'id');
-        return view('apontamentos.add', compact('empresas', 'projetos', 'consultores'));
+        if (Empresa::count() <= 0) {
+            flash('Nenhuma empresa cadastrada, cadastre uma para continuar.')->error();
+            return redirect()->to('empresas');
+        } elseif (Projeto::count() <= 0) {
+            flash('Nenhum projeto cadastrado, cadastre uma para continuar.')->error();
+            return redirect()->to('projetos');
+        } else {
+            $empresas = Empresa::all()->pluck('nome', 'id');
+            $projetos = Projeto::all()->pluck('nome', 'id');
+            $consultores = User::all()->pluck('name', 'id');
+            return view('apontamentos.add', compact('empresas', 'projetos', 'consultores'));
+        }
     }
 
     /**
@@ -45,7 +53,7 @@ class ApontamentosController extends Controller
         $apontamento = new Apontamento($request->except('_token'));
         $apontamento->save();
 
-        return redirect()->to('empresas');
+        return redirect()->to('projetos');
     }
 
     /**
@@ -56,7 +64,8 @@ class ApontamentosController extends Controller
      */
     public function show($id)
     {
-        //
+        $dados = Apontamento::where('projeto_id', $id)->paginate(20);
+        return view('projetos.apontamentos', compact('dados'));
     }
 
     /**

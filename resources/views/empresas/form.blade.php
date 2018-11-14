@@ -26,12 +26,12 @@
 
 <div class="form-group">
     {!! Form::label('cep', 'CEP:') !!}
-    {!! Form::text('cep', null, ['class' => 'form-control', 'placeholder' => 'CEP']) !!}
+    {!! Form::text('cep', null, ['class' => 'form-control', 'placeholder' => 'CEP', 'data-inputmask' => '"mask" : "99999-999"']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::label('telefone', 'Telefone:') !!}
-    {!! Form::text('telefone', null, ['class' => 'form-control', 'placeholder' => 'Telefone']) !!}
+    {!! Form::text('telefone', null, ['class' => 'form-control', 'placeholder' => 'Telefone', 'data-inputmask' => '"mask" : "(99) 9999-9999"']) !!}
 </div>
 
 <div class="form-group">
@@ -73,4 +73,6 @@
             });
         });
     </script>
+    <!-- jquery.inputmask -->
+    <script src="{{ asset('vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js') }}"></script>
 @endsection

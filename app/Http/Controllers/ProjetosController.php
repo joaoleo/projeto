@@ -6,6 +6,7 @@ use App\Models\Empresa;
 use App\Models\Mif;
 use App\Models\Projeto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjetosController extends Controller
 {
@@ -139,9 +140,56 @@ class ProjetosController extends Controller
         }
     }
 
-    public function mif($id = null)
+    public function mif($id)
     {
+        $mifs = Mif::where('projeto_id', '=', $id)->get();
+        $assinado = Mif::where('projeto_id', '=', $id)->where('assinado', '=', true)->where('easy_project', '!=', true)->count();
+        $entregue = Mif::where('projeto_id', '=', $id)->where('entregue', '=', true)->where('easy_project', '!=', true)->count();
+        $easy_project = Mif::where('projeto_id', '=', $id)->where('easy_project', '=', true)->count();
 
-        return view('projetos.mifs');
+        $assin_perc = 0;
+        if ($assinado > 0) {
+            $assin_perc = ($assinado / 8) * 100;
+        }
+
+        $entre_perc = 0;
+        if ($entregue > 0) {
+            $entre_perc = ($entregue / 8) * 100;
+        }
+
+        return view('projetos.mifs', compact('mifs', 'assinado', 'entregue', 'assin_perc', 'entre_perc', 'easy_project'));
+    }
+
+    public function mifUpdate(Request $request)
+    {
+        $assinadas = $request->input('assinado');
+        $entregues = $request->input('entregue');
+        $easy_project = $request->input('easy_project');
+
+        if ($assinadas != null) {
+            foreach ($assinadas as $key => $a_id) {
+                $ass = Mif::find($a_id);
+                if ($ass->id == $a_id) {
+                    DB::table('mifs')->where('id', '=', $a_id)->update(['assinado' => true]);
+                }
+            }
+        }
+
+        if ($entregues != null) {
+            foreach ($entregues as $key => $e_id) {
+                $ent = Mif::findOrFail($e_id);
+                if ($e_id == $ent->id) {
+                    DB::table('mifs')->where('id', '=', $e_id)->update(['entregue' => true]);
+                }
+            }
+        }
+
+        if ($easy_project != null) {
+            $easy = Mif::findOrFail($easy_project);
+            $easy->easy_project = true;
+            $easy->update();
+        }
+
+        return redirect()->back();
     }
 }

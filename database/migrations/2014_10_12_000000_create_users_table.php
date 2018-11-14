@@ -19,8 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 70);
             $table->enum('tipo', ['clt', 'pj'])->default('clt');
-            $table->decimal('pj', 8,2)->nullable();
-            $table->decimal('clt', 8,2)->nullable();
+            $table->decimal('salario', 8,2)->nullable();
             $table->decimal('vt', 8,2)->nullable();
             $table->decimal('va', 8,2)->nullable();
             $table->decimal('vr', 8,2)->nullable();

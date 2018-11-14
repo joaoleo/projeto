@@ -58,8 +58,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                    </button>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
                     <h4 class="modal-title" id="myModalLabel">Adicionar Cargo</h4>
                 </div>
                 {!! Form::open(['url' => '/cargos', 'class' => 'form-horizontal form-label-left']) !!}
@@ -87,17 +86,13 @@
 
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Adicionar Cargo</h4>
+                        <h4 class="modal-title" id="myModalLabel">Editar Cargo</h4>
                     </div>
                     {!! Form::model($cargo, ['url' => '/cargos/' . $cargo->id, 'method' => 'PUT', 'class' => 'form-horizontal form-label-left']) !!}
                         <div class="modal-body">
                             <div class="form-group">
-                                {!! Form::label('id', 'ID:') !!}
-                                {!! Form::text('id', $cargo->id, ['class' => 'form-control', 'disabled']) !!}
-                            </div>
-                            <div class="form-group">
                                 {!! Form::label('nome', 'Cargo:') !!}
-                                {!! Form::text('nome', $cargo->nome, ['class' => 'form-control', 'placeholder' => 'Cargo', 'required']) !!}
+                                {!! Form::text('nome', $cargo->nome, ['class' => 'form-control', 'required']) !!}
                             </div>
                         </div>
                         <div class="modal-footer">

@@ -20,6 +20,8 @@ class CreateCotacoesTable extends Migration
             $table->unsignedSmallInteger('h_consultoria')->nullable();
             $table->unsignedSmallInteger('h_coordenacao')->nullable();
             $table->unsignedSmallInteger('h_translado')->nullable();
+            $table->decimal('orcamento', 8, 2)->nullable();
+            $table->enum('status', ['aberto','aprovado','aguardando','cancelado'])->default('aberto');
             $table->timestamps();
 			
 			$table->index('empresa_id');

@@ -17,6 +17,7 @@
             {{--<li><a><i class="fa fa-usd"></i> Taxas </a></li>--}}
             <li><a href="{{ url('/users') }}"><i class="fa fa-users"></i> Funcionários </a></li>
             <li><a href="{{ url('/cargos') }}"><i class="fa fa-sitemap"></i> Cargos </a></li>
+            <li><a href="{{ url('/taxas') }}"><i class="fa fa-area-chart"></i> Taxas </a></li>
         </ul>
     </div>
 </div>

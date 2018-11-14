@@ -23,6 +23,7 @@ Route::resource('/empresas', 'EmpresasController');
 
 Route::resource('/projetos', 'ProjetosController');
 Route::get('/projetos/{id}/mifs', 'ProjetosController@mif');
+Route::post('/projetos/mifs', 'ProjetosController@mifUpdate');
 
 Route::resource('/cotacoes', 'CotacoesController');
 
@@ -31,3 +32,5 @@ Route::resource('/users', 'UsersController');
 Route::resource('/cargos', 'CargosController');
 
 Route::resource('/apontamentos', 'ApontamentosController');
+
+Route::resource('/taxas', 'TaxasController');

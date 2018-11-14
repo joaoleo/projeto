@@ -12,8 +12,7 @@ class User extends Authenticatable
     use Notifiable;
 
     protected $casts = [
-        'pj' => 'float',
-        'clt' => 'float',
+        'salario' => 'float',
         'vt' => 'float',
         'va' => 'float',
         'vr' => 'float',
@@ -34,8 +33,7 @@ class User extends Authenticatable
         'email',
         'password',
         'tipo',
-        'pj',
-        'clt',
+        'salario',
         'vt',
         'va',
         'vr',
@@ -55,5 +53,23 @@ class User extends Authenticatable
     public function cargo()
     {
         return $this->hasOne(Cargo::class, 'id', 'cargo_id');
+    }
+
+    public function custo()
+    {
+        $valores = (($this->salario + $this->full_premiacao + $this->premiacao_trimestral)*1.4) + $this->vt + $this->va + $this->vr + $this->plano_saude + $this->seguro_vida + $this->celular;
+
+        if ($this->tipo == 'clt') {
+            $soma = $valores - (33 / 100);
+        } else {
+            $soma = $valores;
+        }
+        return $soma;
+    }
+
+    public function custoHora()
+    {
+        $custo = ($this->custo() / 160);
+        return number_format($custo, 2, ',', '.');
     }
 }

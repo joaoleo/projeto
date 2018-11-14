@@ -9,6 +9,8 @@
     <link href="{{ asset('vendors/normalize-css/normalize.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/ion.rangeSlider/css/ion.rangeSlider.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css') }}" rel="stylesheet">
+    <!-- Datepicker -->
+    <link href="{{ asset('vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -41,6 +43,7 @@
                                 {!! Form::label('empresa_id', 'Empresa:') !!}
                                 {!! Form::select('empresa_id', $empresas, null, ['class' => 'form-control', 'required']) !!}
                             </div>
+
                             <div class="form-group">
                                 {!! Form::label('status', 'Status:') !!}
                                 {!! Form::select('status', ['aberto' => 'Aberto', 'finalizado' => 'Finalizado', 'aguardando' => 'Aguardando', 'cancelado' => 'Cancelado'], null, ['class' => 'form-control', 'required']) !!}
@@ -52,23 +55,23 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('data_inicio', 'Data Incício:') !!}
-                                {!! Form::date('data_inicio', null, ['class' => 'form-control', 'required']) !!}
+                                {!! Form::label('data_inicio', 'Data Início:') !!}
+                                {!! Form::text('data_inicio', null, ['class' => 'form-control', 'required']) !!}
                             </div>
 
                             <div class="form-group">
                                 {!! Form::label('data_limite', 'Data Limite:') !!}
-                                {!! Form::date('data_limite', null, ['class' => 'form-control', 'required']) !!}
+                                {!! Form::text('data_limite', null, ['class' => 'form-control', 'required']) !!}
                             </div>
 
                             <div class="form-group">
                                 {!! Form::label('prazo_final', 'Prazo Final:') !!}
-                                {!! Form::date('prazo_final', null, ['class' => 'form-control', 'required']) !!}
+                                {!! Form::text('prazo_final', null, ['class' => 'form-control', 'required']) !!}
                             </div>
 
                             <div class="form-group">
                                 {!! Form::label('data_termino', 'Data Término:') !!}
-                                {!! Form::date('data_termino', null, ['class' => 'form-control', 'required']) !!}
+                                {!! Form::text('data_termino', null, ['class' => 'form-control', 'required']) !!}
                             </div>
 
                             <div class="form-group">
@@ -123,6 +126,26 @@
                 min: 0,
                 max: 100,
                 postfix: " %"
+            });
+        });
+    </script>
+
+    <!-- Datepicker -->
+    <script src="{{ asset('vendors/moment/min/moment.min.js') }}"></script>
+    <script src="{{ asset('vendors/bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#data_inicio').datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+            $('#data_limite').datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+            $('#prazo_final').datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+            $('#data_termino').datetimepicker({
+                format: 'YYYY-MM-DD'
             });
         });
     </script>

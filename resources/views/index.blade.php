@@ -117,16 +117,17 @@
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
                     <p>Sistema de Gerenciamento de Projetos</p>
-                    <small>Edulogy is the ideal choice for your organization, your business and your online education system. Create your online course now with unlimited page templates, color options, and menu features.</small>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a sapien et ipsum ultricies fermentum. Etiam vitae risus lacus. Mauris bibendum non enim a consectetur.</small>
                     <div class="btn-wrapper">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-default wow slideInRight">Buy Now</a>
+                            <a href="#" class="btn btn-primary wow slideInLeft">Texto 1</a>
+                            &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-default wow slideInRight">Texto 2</a>
                         </div>
                     </div><!-- end row -->
                 </div>
             </div>
             <div class="slider-bottom">
-                <span>Copyright &copy 2018 <i class="fa fa-angle-up"></i></span>
+                <span>Copyright &copy{{ date('Y') }} <i class="fa fa-angle-up"></i></span>
             </div>
         </section>
 
