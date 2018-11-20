@@ -4,7 +4,7 @@
         <h3>Geral</h3>
         <ul class="nav side-menu">
             <li><a href="{{ url('/home') }}"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="{{ url('/cotacoes') }}"><i class="fa fa-edit"></i> Cotações</a></li>
+            <li><a href="{{ url('/cotacoes') }}"><i class="fa fa-edit"></i> Orçamentos</a></li>
             <li><a href="{{ url('/empresas') }}"><i class="fa fa-desktop"></i> Empresas</a></li>
             <li><a href="{{ url('/apontamentos/create') }}"><i class="fa fa-table"></i> Adicionar Apontamentos </a></li>
             <li><a href="{{ url('/projetos') }}"><i class="fa fa-bar-chart-o"></i> Projetos</a></li>

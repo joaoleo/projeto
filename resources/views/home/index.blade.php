@@ -12,7 +12,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-bar-chart-o"></i></div>
-                    <div class="count">179</div>
+                    <div class="count">{{ $projetos }}</div>
                     <h3>Projetos</h3>
                     {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
@@ -20,7 +20,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-desktop"></i></div>
-                    <div class="count">55</div>
+                    <div class="count">{{ $empresas }}</div>
                     <h3>Empresas cadastradas</h3>
                     {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
@@ -28,7 +28,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-clock-o"></i></div>
-                    <div class="count">3182</div>
+                    <div class="count">{{ $hora }}</div>
                     <h3>Horas Trabalhadas</h3>
                     {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>
@@ -36,7 +36,7 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-users"></i></div>
-                    <div class="count">3</div>
+                    <div class="count">{{ $funcionarios }}</div>
                     <h3>Funcionários</h3>
                     {{--<p>Lorem ipsum psdea itgum rixt.</p>--}}
                 </div>

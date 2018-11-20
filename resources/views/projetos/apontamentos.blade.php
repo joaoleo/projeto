@@ -42,7 +42,7 @@
                             </thead>
                             <tbody>
                             @forelse($dados as $dado)
-                                <tr class="accordion-toggle"  data-toggle="collapse" data-target="#collapse{{ $dado->id }}">
+                                <tr class="accordion-toggle"  data-toggle="collapse" data-target="#collapse-{{ $dado->id }}">
                                     <td scope="row">{{ $dado->created_at->format('d/m/Y') }}</td>
                                     <td>{{ $dado->empresa->nome }}</td>
                                     <td>{{ $dado->projeto->nome }}</td>
@@ -50,7 +50,7 @@
                                     <td>{{ date('H:i', strtotime($dado->inicio)) }}</td>
                                     <td>{{ date('H:i', strtotime($dado->almoco)) }}</td>
                                     <td>{{ date('H:i', strtotime($dado->fim)) }}</td>
-                                    <td></td>
+                                    <td>{{ $dado->calculoHoras($dado->inicio, $dado->fim)[0] }}</td>
                                     <td>R${{ $dado->refeicao }}</td>
                                     <td>R${{ $dado->estacionamento }}</td>
                                     <td>R${{ $dado->kms }}</td>
@@ -61,7 +61,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="15">
-                                        <div id="collapse{{ $dado->id }}" class="collapse">
+                                        <div id="collapse-{{ $dado->id }}" class="collapse">
                                             <b>Observação:</b>
                                             {!! $dado->observacao !!}
                                         </div>
