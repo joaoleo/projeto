@@ -79,7 +79,9 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
-        $user->password = bcrypt($request->input('senha'));
+        if ($request->input('senha') != null) {
+            $user->password = bcrypt($request->input('senha'));
+        }
         $user->update($request->except('_token'));
 
         return redirect()->to('/users');

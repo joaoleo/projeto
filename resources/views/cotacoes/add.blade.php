@@ -5,7 +5,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Adicionar Cotação</h3>
+                <h3>Adicionar Orçamento</h3>
             </div>
         </div>
         @include('layout.errors')

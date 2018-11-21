@@ -38,6 +38,7 @@
                                     <th>Hospital</th>
                                     <th>Taxi</th>
                                     <th>Despesas</th>
+                                    <th class="column-title no-link last"> <span class="nobr">Opções</span> </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,6 +59,12 @@
                                     <td>R${{ $dado->hospital }}</td>
                                     <td>R${{ $dado->taxi }}</td>
                                     <td>R${{ $dado->despesas }}</td>
+                                    <td class=" last">
+                                        <a href="{{ url('apontamentos/' . $dado->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Apontamento"><i class="fa fa-pencil"></i> Editar</a>
+                                        <a href="javascript:;" onclick="document.getElementById('apontamento-del-{{ $dado->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Apontamento"><i class="fa fa-trash-o"></i> Deletar</a>
+                                        {!! Form::open(['url' => 'apontamentos/' . $dado->id, 'method' => 'DELETE', 'id' => 'apontamento-del-' . $dado->id , 'style' => 'display: none']) !!}
+                                        {!! Form::close() !!}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td colspan="15">

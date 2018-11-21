@@ -72,4 +72,5 @@ class User extends Authenticatable
         $custo = ($this->custo() / 160);
         return number_format($custo, 2, ',', '.');
     }
+
 }

@@ -88,8 +88,8 @@
                         <div class="text-center">
                             <a href="#" class="btn btn-primary wow slideInLeft">Alberto</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-danger wow slideInRight">Bruna</a>
-                            &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-warning wow slideInLeft">Evandro</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-success wow slideInRight">Daiane</a>
+                            &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-warning wow slideInLeft">Evandro</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-info wow slideInLeft">João</a>
                         </div>
                     </div>

@@ -76,7 +76,13 @@ class ApontamentosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $apontamento = Apontamento::findOrFail($id);
+
+        $empresas = Empresa::all()->pluck('nome', 'id');
+        $projetos = Projeto::all()->pluck('nome', 'id');
+        $consultores = User::all()->pluck('name', 'id');
+
+        return view('apontamentos.edit', compact('apontamento', 'empresas', 'projetos', 'consultores'));
     }
 
     /**
@@ -88,7 +94,10 @@ class ApontamentosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $apontamento = Apontamento::findOrFail($id);
+        $apontamento->update($request->except('_token'));
+
+        return redirect()->to('projetos');
     }
 
     /**
@@ -99,7 +108,8 @@ class ApontamentosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Apontamento::findOrFail($id)->delete();
+        return redirect()->to('projetos');
     }
 
     public function formatTime($time)

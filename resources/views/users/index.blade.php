@@ -5,7 +5,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Funcionários</h3>
+                <h3>Funcionárias(os)</h3>
             </div>
         </div>
         @include('flash::message')
@@ -22,16 +22,16 @@
 
                         <table class="table table-bordered">
                             <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Contratação</th>
-                                <th>Cargo</th>
-                                <th>Custo</th>
-                                <th>Custo Hora</th>
-                                <th>Opções</th>
-                            </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Contratação</th>
+                                    <th>Cargo</th>
+                                    <th>Custo</th>
+                                    <th>Custo Hora</th>
+                                    <th>Opções</th>
+                                </tr>
                             </thead>
                             <tbody>
                             @forelse($users as $user)
@@ -44,8 +44,8 @@
                                     <td>R$ {{ number_format($user->custo(), 2, ',', '.') }}</td>
                                     <td>R$ {{ $user->custoHora() }}</td>
                                     <td class=" last">
-                                        <a href="{{ url('users/' . $user->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Funcionário"><i class="fa fa-pencil"></i> Editar</a>
-                                        <a href="javascript:;" onclick="document.getElementById('user-del-{{ $user->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Funcionário"><i class="fa fa-trash-o"></i> Deletar</a>
+                                        <a href="{{ url('users/' . $user->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Funcionária(o)"><i class="fa fa-pencil"></i> Editar</a>
+                                        <a href="javascript:;" onclick="document.getElementById('user-del-{{ $user->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Funcionária(o)"><i class="fa fa-trash-o"></i> Deletar</a>
                                         {!! Form::open(['url' => 'users/' . $user->id, 'method' => 'DELETE', 'id' => 'user-del-' . $user->id , 'style' => 'display: none']) !!}
                                         {!! Form::close() !!}
                                     </td>

@@ -37,7 +37,7 @@
                                         <td class=" ">{{ $empresa->id }}</td>
                                         <td class=" ">{{ $empresa->nome }}</td>
                                         <td class=" ">{{ $empresa->telefone }}</td>
-                                        <td class=" ">{{ $empresa->created_at->format('d-m-Y') }}</td>
+                                        <td class=" ">{{ $empresa->created_at->format('d/m/Y') }}</td>
                                         <td class=" last">
                                             <a href="{{ url('empresas/' . $empresa->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Empresa"><i class="fa fa-pencil"></i> Editar</a>
                                             <a href="javascript:;" onclick="document.getElementById('empresa-del-{{ $empresa->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Empresa"><i class="fa fa-trash-o"></i> Deletar</a>
