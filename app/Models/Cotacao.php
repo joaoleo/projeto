@@ -22,8 +22,7 @@ class Cotacao extends Eloquent
         'h_translado' => 'int',
         'f_translado' => 'float',
         'translado_taxa' => 'int',
-        'total_simposto' => 'float',
-        'total_cimposto' => 'float'
+        'total_simposto' => 'float'
     ];
 
     protected $fillable = [
@@ -41,8 +40,7 @@ class Cotacao extends Eloquent
         'f_translado',
         'translado_taxa',
         'status',
-        'total_simposto',
-        'total_cimposto'
+        'total_simposto'
     ];
 
 //    public function user()
@@ -88,4 +86,5 @@ class Cotacao extends Eloquent
         $total = $this->total_simposto / 0.8632;
         return number_format($total, 2, ',', '.');
     }
+
 }

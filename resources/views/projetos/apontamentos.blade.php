@@ -51,7 +51,7 @@
                                     <td>{{ date('H:i', strtotime($dado->inicio)) }}</td>
                                     <td>{{ date('H:i', strtotime($dado->almoco)) }}</td>
                                     <td>{{ date('H:i', strtotime($dado->fim)) }}</td>
-                                    <td>{{ $dado->calculoHoras($dado->inicio, $dado->fim)[0] }}</td>
+                                    <td>{{ $dado->calculoHoras($dado->inicio, $dado->fim)[0]}}</td>
                                     <td>R${{ $dado->refeicao }}</td>
                                     <td>R${{ $dado->estacionamento }}</td>
                                     <td>R${{ $dado->kms }}</td>

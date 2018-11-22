@@ -28,10 +28,6 @@
                                     <th>Projeto</th>
                                     <th>Progresso</th>
                                     <th>Status</th>
-                                    <th>Data Início</th>
-                                    <th>Data Limite</th>
-                                    <th>Prazo Final</th>
-                                    <th>Data Término</th>
                                     <th class="text-center">Opções</th>
                                 </tr>
                             </thead>
@@ -39,15 +35,17 @@
                                 @forelse($projetos as $projeto)
                                     <tr>
                                         <th scope="row">{{ $projeto->id }}</th>
-                                        <td>{{ $projeto->empresa->nome }}</td>
+                                        <td><b><a href="{{ url('projetos/' . $projeto->id) }}">{{ $projeto->empresa->nome }}</a></b></td>
                                         <td>{{ $projeto->nome }}</td>
-                                        <td>{{ $projeto->progresso }} %</td>
+                                        <td class="project_progress">
+                                            <div class="progress progress_sm">
+                                                <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{ $projeto->progresso }}"></div>
+                                            </div>
+                                            <small>{{ $projeto->progresso }}% Completo</small>
+                                        </td>
                                         <td>{!! $projeto->getStatus() !!}</td>
-                                        <td>{{ $projeto->getDataInicio() }}</td>
-                                        <td>{{ $projeto->getDataLimite() }}</td>
-                                        <td>{{ $projeto->getPrazoFinal() }}</td>
-                                        <td>{{ $projeto->getDataTermino() }}</td>
                                         <td class="last text-center">
+                                            <a href="{{ url('projetos/' . $projeto->id) }}" class="btn btn-xs btn-success" type="button" data-toggle="tooltip" title="Visualizar Projeto"><i class="fa fa-eye"></i> Visualizar</a>
                                             <a href="{{ url('projetos/' . $projeto->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Projeto"><i class="fa fa-pencil"></i> Editar</a>
                                             <a href="javascript:;" onclick="document.getElementById('projeto-del-{{ $projeto->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Projeto"><i class="fa fa-trash-o"></i> Deletar</a>
                                             {!! Form::open(['url' => 'projetos/' . $projeto->id, 'method' => 'DELETE', 'id' => 'projeto-del-' . $projeto->id , 'style' => 'display: none']) !!}
@@ -70,4 +68,9 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <!-- bootstrap-progressbar -->
+    <script src="{{ asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
 @endsection

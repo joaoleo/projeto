@@ -24,29 +24,32 @@
                             <table class="table table-striped jambo_table bulk_action">
                                 <thead>
                                     <tr class="headings">
-                                        <th class="column-title"># </th>
-                                        <th class="column-title">Empresa </th>
-                                        <th class="column-title">Cadastrado em </th>
-                                        <th class="column-title">Total S/Imposto </th>
-                                        <th class="column-title">Total C/Imposto </th>
-                                        <th class="column-title">Status </th>
+                                        <th class="column-title">#</th>
+                                        <th class="column-title">Empresa</th>
+                                        <th class="column-title">Cadastrado em</th>
+                                        <th class="column-title">Total S/Imposto</th>
+                                        <th class="column-title">Total C/Imposto</th>
+                                        <th class="column-title">Status</th>
                                         <th class="column-title no-link last"><span class="nobr">Opções</span> </th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     @forelse($cotacoes as $cotacao)
-                                        <td class=" ">{{ $cotacao->id }}</td>
-                                        <td class=" ">{{ $cotacao->empresa->nome }}</td>
-                                        <td class=" ">{{ $cotacao->created_at->format('d/m/Y') }}</td>
-                                        <td class=" ">R${{ $cotacao->totalSemImposto() }}</td>
-                                        <td class=" ">R${{ $cotacao->totalComImposto() }}</td>
-                                        <td class=" ">{!! $cotacao->getStatus() !!}</td>
-                                        <td class=" last">
-                                            <a href="{{ url('cotacoes/' . $cotacao->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Cotação"><i class="fa fa-pencil"></i> Editar</a>
-                                            <a href="javascript:;" onclick="document.getElementById('cotacao-del-{{ $cotacao->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Cotação"><i class="fa fa-trash-o"></i> Deletar</a>
-                                            {!! Form::open(['url' => 'cotacoes/' . $cotacao->id, 'method' => 'DELETE', 'id' => 'cotacao-del-' . $cotacao->id , 'style' => 'display: none']) !!}
-                                            {!! Form::close() !!}
-                                        </td>
+                                        <tr>
+                                            <td class=" ">{{ $cotacao->id }}</td>
+                                            <td class=" ">{{ $cotacao->empresa->nome }}</td>
+                                            <td class=" ">{{ $cotacao->created_at->format('d/m/Y') }}</td>
+                                            <td class=" ">R${{ $cotacao->totalSemImposto() }}</td>
+                                            <td class=" ">R${{ $cotacao->totalComImposto() }}</td>
+                                            <td class=" ">{!! $cotacao->getStatus() !!}</td>
+                                            <td class=" last">
+                                                <a href="{{ url('cotacoes/' . $cotacao->id . '/edit') }}" class="btn btn-xs btn-info" type="button" data-toggle="tooltip" title="Editar Cotação"><i class="fa fa-pencil"></i> Editar</a>
+                                                <a href="javascript:;" onclick="document.getElementById('cotacao-del-{{ $cotacao->id }}').submit();" class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="Remover Cotação"><i class="fa fa-trash-o"></i> Deletar</a>
+                                                {!! Form::open(['url' => 'cotacoes/' . $cotacao->id, 'method' => 'DELETE', 'id' => 'cotacao-del-' . $cotacao->id , 'style' => 'display: none']) !!}
+                                                {!! Form::close() !!}
+                                            </td>
+                                        </tr>
                                     @empty
                                         <td colspan="6" class="text-center">Nenhum orçamento cadastrada.</td>
                                     @endforelse
