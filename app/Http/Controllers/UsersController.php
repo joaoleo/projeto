@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+       // $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -66,6 +71,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $cargos = Cargo::all()->pluck('nome', 'id');
+
         return view('users.edit', compact('user', 'cargos'));
     }
 

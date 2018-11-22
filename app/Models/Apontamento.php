@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
 
-
 class Apontamento extends Eloquent
 {
     protected $casts = [

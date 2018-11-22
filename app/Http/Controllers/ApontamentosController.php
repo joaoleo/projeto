@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class ApontamentosController extends Controller
 {
+    public function __construct()
+    {
+       // $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -112,8 +117,4 @@ class ApontamentosController extends Controller
         return redirect()->to('projetos');
     }
 
-    public function formatTime($time)
-    {
-        return date("Y-m-d H:i:s", strtotime($time));
-    }
 }

@@ -11,10 +11,10 @@ class Estado extends Eloquent
 		'uf'
 	];
 
-	public function cidades()
-	{
-		return $this->hasMany(\App\Models\Cidade::class);
-	}
+	// public function cidades()
+	// {
+	// 	return $this->hasMany(\App\Models\Cidade::class);
+	// }
 
 	public function empresas()
 	{

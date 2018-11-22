@@ -13,9 +13,9 @@ class TaxasSeeder extends Seeder
     {
         $taxas = [
             ['nome' => 'DIV Imposto', 'valor' => 0.8632],
-            ['nome' => 'Valor Consultoria', 'valor' => 170.00],
-            ['nome' => 'Valor Coordenação', 'valor' => 185.00],
-            ['nome' => 'Translado', 'valor' => null]
+            ['nome' => 'Taxa Consultoria', 'valor' => 170.00],
+            ['nome' => 'Taxa Coordenação', 'valor' => 185.00],
+            ['nome' => 'Taxa Translado', 'valor' => null]
         ];
 
         foreach ($taxas as $taxa) {
