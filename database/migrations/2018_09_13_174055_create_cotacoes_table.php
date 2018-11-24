@@ -20,17 +20,17 @@ class CreateCotacoesTable extends Migration
             $table->unsignedInteger('consultor_id');
             $table->unsignedSmallInteger('h_consultoria')->nullable();
             $table->unsignedInteger('consultor_taxa');
-            $table->decimal('f_consultoria')->nullable();
+            $table->decimal('f_consultoria')->default();
             //coordenador
             $table->unsignedInteger('coordenador_id');
             $table->unsignedSmallInteger('h_coordenacao')->nullable();
             $table->unsignedInteger('coordenador_taxa');
-            $table->decimal('f_coordenacao')->nullable();
+            $table->decimal('f_coordenacao')->default();
             //translado
             $table->unsignedInteger('viajante_id');
             $table->unsignedSmallInteger('h_translado')->nullable();
             $table->unsignedInteger('translado_taxa');
-            $table->decimal('f_translado')->nullable();
+            $table->decimal('f_translado')->default();
             //
             $table->enum('status', ['aberto','aprovado','aguardando','cancelado'])->default('aberto');
             $table->decimal('total_simposto', 8, 2)->nullable();

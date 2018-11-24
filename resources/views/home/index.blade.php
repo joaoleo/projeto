@@ -47,7 +47,7 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Lucratividade <small>Lucro anual</small></h2>
+                        <h2>Faturamento/Despesas Mensal</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -57,16 +57,16 @@
                             </div>
                             <div class="tiles">
                                 <div class="col-md-3 tile">
-                                    <span>Gastos</span>
-                                    <h2>R$31.809,92</h2>
-                                    <span class="sparkline11 graph" style="height: 160px;">
+                                    <span>Faturamento do ano</span>
+                                    <h2>R${{ number_format($faturamento, 2, ',', '.') }}</h2>
+                                    <span class="sparkline22 graph" style="height: 160px;">
                                         <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
                                     </span>
                                 </div>
                                 <div class="col-md-3 tile">
-                                    <span>Lucro</span>
-                                    <h2>R$256.790,55</h2>
-                                    <span class="sparkline22 graph" style="height: 160px;">
+                                    <span>Despesas do ano</span>
+                                    <h2>R${{ number_format($despesa, 2, ',', '.') }}</h2>
+                                    <span class="sparkline11 graph" style="height: 160px;">
                                         <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
                                     </span>
                                 </div>
@@ -86,25 +86,18 @@
     <script src="{{ asset('vendors/raphael/raphael-min.js') }}"></script>
     <script src="{{ asset('vendors/morris.js/morris.min.js') }}"></script>
     <script>
+        var months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+
         new Morris.Line({
-            // ID of the element in which to draw the chart.
             element: 'chartty',
-            // Chart data records -- each entry in this array corresponds to a point on
-            // the chart.
-            data: [
-                { year: '2014', value: 20 },
-                { year: '2015', value: 10 },
-                { year: '2016', value: 5 },
-                { year: '2017', value: 5 },
-                { year: '2018', value: 20 }
-            ],
-            // The name of the data record attribute that contains x-values.
-            xkey: 'year',
-            // A list of names of data record attributes that contain y-values.
-            ykeys: ['value'],
-            // Labels for the ykeys -- will be displayed when you hover over the
-            // chart.
-            labels: ['Valor']
+            data: {{ route('api.home') }},
+            xkey: 'mes',
+            ykeys: ['faturamento', 'despesa'],
+            lineColors: ['#228B22', '#FF0000'],
+            labels: ['Faturamento', 'Despesas'],
+            xLabelFormat: function (x) {
+                return months[x.getMonth()];
+            }
         });
     </script>
 @endsection

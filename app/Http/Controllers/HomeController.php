@@ -36,6 +36,10 @@ class HomeController extends Controller
         $hora = str_replace('[', '', $hora);
         $hora = str_replace(']', '', $hora);
 
-        return view('home.index', compact('projetos', 'empresas', 'funcionarios', 'hora'));
+        $faturamento = DB::table('cotacoes')->where('status', '=', 'aprovado')->sum('total_simposto');
+
+        $despesa = DB::table('apontamentos')->sum(DB::raw('refeicao + estacionamento + kms + pedagio + hospital + taxi + despesas'));
+
+        return view('home.index', compact('projetos', 'empresas', 'funcionarios', 'hora', 'faturamento', 'despesa'));
     }
 }

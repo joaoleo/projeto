@@ -22,13 +22,13 @@ class CreateApontamentosTable extends Migration
             $table->time('almoco');
             $table->time('fim');
 
-            $table->decimal('refeicao')->nullable();
-            $table->decimal('estacionamento')->nullable();
-            $table->decimal('kms')->nullable();
-            $table->decimal('pedagio')->nullable();
-            $table->decimal('hospital')->nullable();
-            $table->decimal('taxi')->nullable();
-            $table->decimal('despesas')->nullable();
+            $table->decimal('refeicao')->default(0.00);
+            $table->decimal('estacionamento')->default(0.00);
+            $table->decimal('kms')->default(0.00);
+            $table->decimal('pedagio')->default(0.00);
+            $table->decimal('hospital')->default(0.00);
+            $table->decimal('taxi')->default(0.00);
+            $table->decimal('despesas')->default(0.00);
             $table->text('observacao')->nullable();
 
             $table->timestamps();
