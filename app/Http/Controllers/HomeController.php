@@ -30,15 +30,17 @@ class HomeController extends Controller
         $empresas = Empresa::all()->count();
         $funcionarios = User::all()->count();
 
+        $ano = date('Y');
+
         $hora = DB::table('apontamentos')->selectRaw('time(sum(TIMEDIFF(fim, inicio))) as total')->get()->pluck('total')->flatten();
 
         $hora = str_replace('"', '', $hora);
         $hora = str_replace('[', '', $hora);
         $hora = str_replace(']', '', $hora);
 
-        $faturamento = DB::table('cotacoes')->where('status', '=', 'aprovado')->sum('total_simposto');
+        $faturamento = DB::table('cotacoes')->where('status', '=', 'aprovado')->whereYear('created_at', $ano)->sum('total_simposto');
 
-        $despesa = DB::table('apontamentos')->sum(DB::raw('refeicao + estacionamento + kms + pedagio + hospital + taxi + despesas'));
+        $despesa = DB::table('apontamentos')->whereYear('created_at', $ano)->sum(DB::raw('refeicao + estacionamento + kms + pedagio + hospital + taxi + despesas'));
 
         return view('home.index', compact('projetos', 'empresas', 'funcionarios', 'hora', 'faturamento', 'despesa'));
     }

@@ -86,11 +86,26 @@
     <script src="{{ asset('vendors/raphael/raphael-min.js') }}"></script>
     <script src="{{ asset('vendors/morris.js/morris.min.js') }}"></script>
     <script>
+        var json = (function () {
+            var json = null;
+            $.ajax({
+                'async': false,
+                'global': false,
+                'url': '{{ route('api.home') }}',
+                'dataType': "json",
+                'success': function (data) {
+                    json = data;
+                }
+            });
+            return json;
+        })
+        ();
+
         var months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
         new Morris.Line({
             element: 'chartty',
-            data: {{ route('api.home') }},
+            data: json,
             xkey: 'mes',
             ykeys: ['faturamento', 'despesa'],
             lineColors: ['#228B22', '#FF0000'],
