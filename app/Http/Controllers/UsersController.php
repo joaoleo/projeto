@@ -45,6 +45,7 @@ class UsersController extends Controller
     {
         $user = new User($request->except('_token'));
         $user->password = bcrypt($request->input('senha'));
+        $user->cargo_id = $request->input('cargo_id');
         $user->save();
 
         return redirect()->to('/users');
