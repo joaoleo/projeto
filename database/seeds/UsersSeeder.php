@@ -14,7 +14,7 @@ class UsersSeeder extends Seeder
         $users = [
             [
                 'name' => 'Eduardo Henrique Silva',
-                'email' => 'eduardo.silva@empresa.com.br',
+                'email' => 'eduardo.silva@sgp.com.br',
                 'password' => bcrypt('123456'),
                 'cargo_id' => 7,
                 'tipo' => 'clt',
@@ -30,7 +30,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'name' => 'Guilherme de Paula',
-                'email' => 'guilherme.paula@empresa.com.br',
+                'email' => 'guilherme.paula@sgp.com.br',
                 'password' => bcrypt('123456'),
                 'cargo_id' => 8,
                 'tipo' => 'pj',
@@ -46,7 +46,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'name' => 'Pedro Rodrigues Almeida',
-                'email' => 'pedro.almeida@empresa.com.br',
+                'email' => 'pedro.almeida@sgp.com.br',
                 'password' => bcrypt('123456'),
                 'cargo_id' => 6,
                 'tipo' => 'clt',
