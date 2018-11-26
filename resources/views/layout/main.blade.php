@@ -43,7 +43,7 @@
                     </div>
                     <div class="profile_info">
                         <span>Bem-vinda(o),</span>
-                        <h2>Guilherme de Paula</h2>
+                        <h2>{{ auth()->user()->name }}</h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
