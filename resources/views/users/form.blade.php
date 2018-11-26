@@ -25,13 +25,8 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('pj', 'PJ:') !!}
+    {!! Form::label('salario', 'Salário:') !!}
     {!! Form::number('pj', null, ['class' => 'form-control', 'step' => 'any']) !!}
-</div>
-
-<div class="form-group">
-    {!! Form::label('clt', 'CLT:') !!}
-    {!! Form::number('clt', null, ['class' => 'form-control', 'step' => 'any']) !!}
 </div>
 
 <div class="form-group">
