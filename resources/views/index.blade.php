@@ -78,6 +78,7 @@
 
         <section id="home" class="video-section js-height-full">
             <div class="overlay"></div>
+            
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
                     <p>Sistema de Gerenciamento de Projetos</p>
@@ -85,8 +86,8 @@
                     <b>Alunas(os):</b>
                     <div class="btn-wrapper">
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary wow slideInLeft">Alberto</a>
-                            &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-danger wow slideInRight">Bruna</a>
+                            <a href="#" class="btn btn-primary wow slideInRight">Alberto</a>
+                            &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-danger wow slideInLeft">Bruna</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-success wow slideInRight">Daiane</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-warning wow slideInLeft">Evandro</a>
                             &nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-info wow slideInLeft">João</a>
@@ -94,6 +95,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="slider-bottom">
                 <span>Copyright &copy {{ date('Y') }} <i class="fa fa-angle-up"></i></span>
             </div>
