@@ -41,8 +41,7 @@
                     <div class="row-fluid">
                         <div class="col-md-6 col-sm-6 text-left">
                             <p>
-                                {{--<strong><i class="fa fa-phone"></i></strong> +90 543 123 45 67 &nbsp;&nbsp;--}}
-                                {{--<strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">info@yoursite.com</a>--}}
+                                
                             </p>
                         </div>
                     </div>
@@ -67,7 +66,6 @@
                                     <li><a href="{{ url('/home') }}">Painel Admin</a></li>
                                 @else
                                     <li><a href="{{ route('login') }}">Login</a></li>
-                                    {{--<li><a href="{{ route('register') }}">Register</a></li>--}}
                                 @endauth
                             @endif
                         </ul>

@@ -1,3 +1,5 @@
-## Trabalho
+## Sistema de Gerenciamento de Projetos
 
-Trabalho complicado pra fazer
+Anhanguera - Jundiaí
+
+Trabalho solicitado pelo docente Vanderlei Ienne, da disciplina de Projeto Integrado V - Desenvolvimento de Sistemas, para fins de avaliação do 5º semestre do ano de 2018, no curso de  Análise e Desenvolvimento de Sistemas.
