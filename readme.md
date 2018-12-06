@@ -1,22 +1,22 @@
 ## Sistema de Gerenciamento de Projetos
 
-Anhanguera - Jundiaí
+Anhanguera - Jundiaí - 2 Semestre 2018
 
 Trabalho solicitado pelo docente Vanderlei Ienne, da disciplina de Projeto Integrado V - Desenvolvimento de Sistemas, para fins de avaliação do 5º semestre do ano de 2018, no curso de  Análise e Desenvolvimento de Sistemas.
 
 ### Index
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/index.png)
+![Index](https://raw.githubusercontent.com/joaoleo/projeto/master/images/index.png)
 ### Home
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/home.png)
+![Home](https://raw.githubusercontent.com/joaoleo/projeto/master/images/home.png)
 ### Orçamentos
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/orcamentos.png)
+![Orcamentos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/orcamentos.png)
 ### Projetos
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/projetos.png)
+![Projetos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projetos.png)
 ### Projeto Detalhes
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/projeto_detalhes.png)
+![Projeto Detalhes](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projeto_detalhes.png)
 ### Projeto MIFS
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/projeto_mifs.png)
+![Projeto MIFS](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projeto_mifs.png)
 ### Apontamentos
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/apontamentos.png)
+![Apontamentos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/apontamentos.png)
 ### Usuarios
-![alt text](https://raw.githubusercontent.com/joaoleo/projeto/branch/images/usuarios.png)
+![Usuarios](https://raw.githubusercontent.com/joaoleo/projeto/master/images/usuarios.png)
