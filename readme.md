@@ -4,6 +4,14 @@ Anhanguera - 2 Semestre 2018
 
 Trabalho solicitado pelo docente Vanderlei Ienne, da disciplina de Projeto Integrado V - Desenvolvimento de Sistemas, para fins de avaliação do 5º semestre do ano de 2018, no curso de  Análise e Desenvolvimento de Sistemas.
 
+Usuários já cadastrados para login:
+pedro.almeida@sgp.com.br
+guilherme.paula@sgp.com.br
+eduardo.silva@sgp.com.br
+
+Senha de todos:
+123456
+
 ### Index
 ![Index](https://raw.githubusercontent.com/joaoleo/projeto/master/images/index.png)
 ### Home
