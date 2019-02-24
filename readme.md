@@ -61,18 +61,18 @@ $ php artisan serve "para rodar como localhost:8000"
 
 
 ### Index
-![Index](https://raw.githubusercontent.com/joaoleo/projeto/master/images/index.png)
+![Index](https://raw.githubusercontent.com/joaorik/projeto/master/images/index.png)
 ### Home
-![Home](https://raw.githubusercontent.com/joaoleo/projeto/master/images/home.png)
+![Home](https://raw.githubusercontent.com/joaorik/projeto/master/images/home.png)
 ### Orçamentos
-![Orcamentos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/orcamentos.png)
+![Orcamentos](https://raw.githubusercontent.com/joaorik/projeto/master/images/orcamentos.png)
 ### Projetos
-![Projetos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projetos.png)
+![Projetos](https://raw.githubusercontent.com/joaorik/projeto/master/images/projetos.png)
 ### Projeto Detalhes
-![Projeto Detalhes](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projeto_detalhes.png)
+![Projeto Detalhes](https://raw.githubusercontent.com/joaorik/projeto/master/images/projeto_detalhes.png)
 ### Projeto MIFS
-![Projeto MIFS](https://raw.githubusercontent.com/joaoleo/projeto/master/images/projeto_mifs.png)
+![Projeto MIFS](https://raw.githubusercontent.com/joaorik/projeto/master/images/projeto_mifs.png)
 ### Apontamentos
-![Apontamentos](https://raw.githubusercontent.com/joaoleo/projeto/master/images/apontamentos.png)
+![Apontamentos](https://raw.githubusercontent.com/joaorik/projeto/master/images/apontamentos.png)
 ### Usuarios
-![Usuarios](https://raw.githubusercontent.com/joaoleo/projeto/master/images/usuarios.png)
+![Usuarios](https://raw.githubusercontent.com/joaorik/projeto/master/images/usuarios.png)
