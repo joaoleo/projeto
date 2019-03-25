@@ -1,5 +1,10 @@
 ## Sistema de Gerenciamento de Projetos
 
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
+[![Build Status](https://img.shields.io/badge/Laravel-5.7.25-f4645f.svg)]()
+
+
 Anhanguera - 2º Semestre 2018
 
 Trabalho solicitado pelo docente Vanderlei Ienne, da disciplina de Projeto Integrado V - Desenvolvimento de Sistemas, para fins de avaliação do 5º semestre do ano de 2018, no curso de  Análise e Desenvolvimento de Sistemas.
@@ -9,8 +14,7 @@ pedro.almeida@sgp.com.br
 guilherme.paula@sgp.com.br
 eduardo.silva@sgp.com.br
 
-Senha de todos:
-123456
+Senha de todos: 123456
 
 ### Requisitos: *
 - Web server (Apache2 ou Nginx)
