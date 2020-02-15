@@ -65,18 +65,18 @@ $ php artisan serve "para rodar como localhost:8000"
 
 
 ### Index
-![Index](https://raw.githubusercontent.com/joaorik/projeto/master/images/index.png)
+![Index](/images/index.png)
 ### Home
-![Home](https://raw.githubusercontent.com/joaorik/projeto/master/images/home.png)
+![Home](/images/home.png)
 ### Orçamentos
-![Orcamentos](https://raw.githubusercontent.com/joaorik/projeto/master/images/orcamentos.png)
+![Orcamentos](/images/orcamentos.png)
 ### Projetos
-![Projetos](https://raw.githubusercontent.com/joaorik/projeto/master/images/projetos.png)
+![Projetos](/images/projetos.png)
 ### Projeto Detalhes
-![Projeto Detalhes](https://raw.githubusercontent.com/joaorik/projeto/master/images/projeto_detalhes.png)
+![Projeto Detalhes](/images/projeto_detalhes.png)
 ### Projeto MIFS
-![Projeto MIFS](https://raw.githubusercontent.com/joaorik/projeto/master/images/projeto_mifs.png)
+![Projeto MIFS](/images/projeto_mifs.png)
 ### Apontamentos
-![Apontamentos](https://raw.githubusercontent.com/joaorik/projeto/master/images/apontamentos.png)
+![Apontamentos](/images/apontamentos.png)
 ### Usuarios
-![Usuarios](https://raw.githubusercontent.com/joaorik/projeto/master/images/usuarios.png)
+![Usuarios](/images/usuarios.png)
